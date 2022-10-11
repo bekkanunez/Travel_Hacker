@@ -7,3 +7,4 @@ function ticketMaster(e) {
 }
 
 fetchButton.addEventListener("click", ticketMaster);
+console.log("hellow");
