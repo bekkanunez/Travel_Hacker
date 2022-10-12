@@ -1,7 +1,8 @@
 body {
-  display: flex;
+  /* display: flex; */
   min-height: 100vh;
   flex-direction: column;
+  background-color: darkslategrey;
 }
 
 main {
@@ -15,10 +16,19 @@ main {
   color: #4e78c7;
 }
 
-.parallax-container {
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
+
+.body.parallax-container {
   background-size: cover;
 
-  background-image: url("/assets/images/pexels-frank-cone.jpg");
+  background-image: url("/assets/images/background.png")!important;
 }
 .transparentBG {
   background-color: rgba(0, 0, 0, 0);
