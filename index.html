@@ -47,10 +47,10 @@
         </div>
         <div class="mainbox">
           <div class="button-Container">
-            <a href="events" id="btn-small" class="btn-small blue darken-2 white-text hoverable">
+            <a  id="ebutton" class="btn-small blue darken-2 white-text hoverable">
               Events
             </a>
-            <button class="btn-small blue darken-2 white-text hoverable">
+            <button id="flightbtn" class="btn-small blue darken-2 white-text hoverable">
               Flights
             </button>
             <button class="btn-small blue darken-2 white-text hoverable">
@@ -109,10 +109,41 @@
                 <input id="city-input" type="text" clas="text-white" placeholder=" Location" />
               </form>
             </div>
+            <div id="flightsdisplay">
+              <form action="" class="row">
+                <label for="Airport">Choose Departing AirPort</label>
+                <select class="" name="flights" id="flightcode">
+                  <option value="United states aiport">
+                    United States Airport
+                  </option>
+                  <option value="AAL">AMerican AirLine</option>
+                  <option value="GBP">GBP</option>
+                  <option value="CAD">CAD</option>
+                  <option value="JPY">JPY</option>
+                  <option value="CLP">CLP</option>
+                  <option value="CHF">CHF</option>
+                  <option value="AUD">AUD</option>
+                  <option value="HKD">HKD</option>
+                  <option value="LSL">LSL</option>
+                  <option value="NZD ">NZD</option>
+                  <option value="RMB ">RMB</option>
+                  <option value="INR">INR</option>
+                  <option value="NGN">NGN</option>
+                  <option value="KRW">KRW</option>
+                  <option value="AED">AED</option>
+                </select>
+              </form>
+            </div>
+            <a href="#events"id="fetch-button" class="btn-large blue darken-2">
+              Search<i class="material-icons right">send</i>
+            </a>
+            <a id="ersubmit" class="btn-large blue darken-2">
+              Search<i class="material-icons right">send</i>
+            </a>
+            <a id="flsubmit" class="btn-large blue darken-2">
+              Search<i class="material-icons right">send</i>
+            </a>
           </div>
-          <a id="fetch-button" class="btn-large blue darken-2">
-            Search<i class="material-icons right">send</i>
-          </a>
         </div>
       </div>
     </div>
@@ -140,7 +171,8 @@
               risus commodo viverra maecenas.
             </p>
           </div>
-        </div> -->
+
+        </div>
 
 
         <div class="col s12 m4">
@@ -224,6 +256,7 @@
     </div>
   </footer>
   <!-- all connected js files -->
+  <script src="flightstats.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="currency.js"></script>
   <script src="ticketmasterapi.js"></script>
@@ -236,4 +269,3 @@
 </body>
 
 </html>
-

@@ -1,14 +1,17 @@
-var eventContainer = document.getElementById('events');
-var fetchButton = document.getElementById('fetch-button')
+var eventContainer = document.getElementById("events");
+var fetchButton = document.getElementById("fetch-button");
+let eventsButton = document.getElementById("ebutton");
 
 function toTitleCase(str) {
-  return str.replace(/\w\S*/g, function(txt){
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 }
 
 function getApi(city) {
-  var requestUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=BXvJ4aOkyAubQcnM2c60FbqlkE3Jhfcg&city=' + city;
+  var requestUrl =
+    "https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=BXvJ4aOkyAubQcnM2c60FbqlkE3Jhfcg&city=" +
+    city;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -19,8 +22,8 @@ function getApi(city) {
       let sectionTitle = document.getElementById("events-title");
       let capitalizedCity = toTitleCase(city);
       sectionTitle.textContent = capitalizedCity + " Local Events";
-      
-      console.log('Ticketmaster Data \n----------');
+
+      console.log("Ticketmaster Data \n----------");
       console.log(data);
       var events = data._embedded.events;
       for (var i = 0; i < events.length; i++) {
@@ -33,8 +36,8 @@ function getApi(city) {
         let cardImage = document.createElement("div");
         cardImage.setAttribute("class", "card-image");
 
-        let img = document.createElement('img');
-        img.style = "height:100px;"
+        let img = document.createElement("img");
+        img.style = "height:100px;";
         img.src = events[i].images[0].url;
         cardImage.appendChild(img);
 
@@ -52,7 +55,7 @@ function getApi(city) {
         title.textContent = shortenedTitle;
 
         let venue = document.createElement("p");
-        venue.setAttribute("class", "font-weight-italic")
+        venue.setAttribute("class", "font-weight-italic");
         venue.style = "display:table;";
         var shortenedVenue = events[i]._embedded.venues[0].name;
         if (shortenedVenue.length > 33) {
@@ -63,9 +66,9 @@ function getApi(city) {
         let cardAction = document.createElement("div");
         cardAction.setAttribute("class", "card-action");
 
-        let button = document.createElement('a');
+        let button = document.createElement("a");
         // button.setAttribute("class", "btn btn-primary");
-        button.textContent = "Get tickets here!"
+        button.textContent = "Get tickets here!";
         button.href = events[i].url;
 
         cardAction.appendChild(button);
@@ -80,13 +83,20 @@ function getApi(city) {
         column.appendChild(card);
 
         document.getElementById("events").appendChild(column);
-
       }
-
     });
 }
 
-fetchButton.addEventListener('click', function () {
+fetchButton.addEventListener("click", function () {
   let city = document.getElementById("city-input").value;
   getApi(city);
+});
+
+eventsButton.addEventListener("click", function () {
+  displayEvent.style.display = "block";
+  submitButton.style.display = "block";
+  ERSubmitButton.style.display = "none";
+  displayER.style.display = "none";
+  displayFlights.style.display = "none";
+  FlightSubmit.style.display = "none";
 });
