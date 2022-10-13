@@ -103,6 +103,7 @@
                 <input id="amount" type="text" value=" $ Amount" />
               </form>
             </div>
+
             <div class="eventsdisplaybox">
               <form action="" class="">
                 <input id="city-input" type="text" clas="text-white" placeholder=" Location" />
@@ -146,8 +147,10 @@
         </div>
       </div>
     </div>
+
   </div>
   <div class="container">
+    <div id="map"></div> 
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
@@ -168,7 +171,10 @@
               risus commodo viverra maecenas.
             </p>
           </div>
+
         </div>
+
+
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text">
@@ -239,12 +245,27 @@
             <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
           </ul>
         </div>
+      
       </div>
-    </footer>
-    <!-- all connected js files -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="currency.js"></script>
-    <script src="ticketmasterapi.js"></script>
-    <script src="flightstats.js"></script>
-  </body>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+  <!-- all connected js files -->
+  <script src="flightstats.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="currency.js"></script>
+  <script src="ticketmasterapi.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./google.js"></script>
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAML37UWImB_IHbWXqjq5kquRAGr6HWqgc&callback=initMap">
+  </script>
+</body>
+
 </html>
