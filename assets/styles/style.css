@@ -2,13 +2,14 @@ body {
   /* display: flex; */
   min-height: 100vh;
   flex-direction: column;
+  background-image: url("https://images.pexels.com/photos/4858277/pexels-photo-4858277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 
 main {
   flex: 1 0 auto;
 }
 .logo2 {
-  color: #cccdd3;
+  color: #f5f6fd;
 }
 
 .logo1 {
@@ -26,8 +27,6 @@ main {
 
 .parallax-container {
   background-size: cover;
-
-  background-image: url("https://images.pexels.com/photos/4858277/pexels-photo-4858277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 .transparentBG {
   background-color: rgba(0, 0, 0, 0);
@@ -36,13 +35,14 @@ main {
   padding-left: 20px;
 }
 .page-footer {
-  background-color: #0c3040;
+  background-image: linear-gradient(to bottom right, #0c3040, #19546993);
 }
+
 .mainbox {
   background-color: rgba(255, 255, 255, 0.226);
+  position: relative;
+  overflow: hidden;
   height: 280px;
-  width: 67%;
-  margin-left: 200px;
 }
 
 input {
@@ -96,14 +96,11 @@ input {
   margin-top: 10px;
   border: 2px solid black;
   box-shadow: 5px 5px 20px black;
+  height: 630px;
 }
 select {
   display: flex;
   width: 20%;
-}
-
-#events {
-  min-height: 780px;
 }
 
 #to {
@@ -145,5 +142,12 @@ select {
 #fetch-button {
   margin-top: 20px;
   width: 170px;
+}
+#flights-title {
+  color: white !important;
+}
+.smalh {
+  height: 150px !important;
+  opacity: 0.9 !important;
 }
 /* materialize helpers for spacing */
