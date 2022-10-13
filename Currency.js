@@ -1,7 +1,7 @@
 let displayER = document.querySelector(".currencydisplaybox");
 let ERButton = document.getElementById("erbtn");
 let displayEvent = document.querySelector(".eventsdisplaybox");
-let sumbitButton = document.getElementById("fetch-button");
+let submitButton = document.getElementById("fetch-button");
 let ERSubmitButton = document.getElementById("ersubmit");
 let from = document.getElementById("from");
 let to = document.getElementById("to");
@@ -11,7 +11,7 @@ let renderAmount = document.getElementById("renderamout");
 function displayBox(e) {
   displayEvent.style.display = "none";
   displayER.style.display = "block";
-  sumbitButton.style.display = "none";
+  submitButton.style.display = "none";
   ERSubmitButton.style.display = "block";
 
   displayFlights.style.display = "none";

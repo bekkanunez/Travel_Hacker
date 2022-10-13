@@ -94,7 +94,7 @@ fetchButton.addEventListener("click", function () {
 
 eventsButton.addEventListener("click", function () {
   displayEvent.style.display = "block";
-  sumbitButton.style.display = "block";
+  submitButton.style.display = "block";
   ERSubmitButton.style.display = "none";
   displayER.style.display = "none";
   displayFlights.style.display = "none";
