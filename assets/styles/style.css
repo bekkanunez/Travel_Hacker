@@ -144,6 +144,10 @@ select {
   width: 170px;
 }
 #flights-title {
-  color: black !important;
+  color: white !important;
+}
+.smalh {
+  height: 150px !important;
+  opacity: 0.9 !important;
 }
 /* materialize helpers for spacing */

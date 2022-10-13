@@ -36,10 +36,10 @@ function displayFlight() {
         let arrayData = response.data;
         let sectionTitle = document.getElementById("flights-title");
         sectionTitle.textContent = "Flights from " + SelectedFC.value;
-
+        console.log(arrayData);
         for (const element in arrayData) {
           let card = document.createElement("div");
-          card.setAttribute("class", "card small");
+          card.setAttribute("class", " smalh card small hoverable");
           let column = document.createElement("div");
           column.setAttribute("class", "col s12 m6 l3");
 
@@ -48,14 +48,19 @@ function displayFlight() {
 
           let price = document.createElement("p");
           let departat = document.createElement("p");
+          let returnat = document.createElement("p");
 
           title.textContent = arrayData[element].destination;
           price.textContent = arrayData[element].price;
           departat.textContent = arrayData[element].departure_at;
+          returnat.textContent = arrayData[element].return_at;
+
           column.appendChild(card);
           card.appendChild(title);
           card.appendChild(price);
           card.appendChild(departat);
+          card.appendChild(returnat);
+
           FlightsCard.appendChild(column);
         }
       })
