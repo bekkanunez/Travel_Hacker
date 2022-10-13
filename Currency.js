@@ -14,6 +14,8 @@ function displayBox(e) {
   sumbitButton.style.display = "none";
   ERSubmitButton.style.display = "block";
 
+  displayFlights.style.display = "none";
+  FlightSubmit.style.display = "none";
   function fetchData() {
     let sfrom = from.value;
     let nto = to.value;
