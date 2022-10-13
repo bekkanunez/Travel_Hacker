@@ -1,4 +1,4 @@
-var searchBar = document.getElementById('location')
+var searchBar = document.getElementById('city-input')
 var submitBtn = document.getElementById('fetch-button')
 var map;
 
@@ -28,5 +28,12 @@ function initMap() {
         center: { lat: 30.2672, lng: -97.7431 }
     }
     map = new google.maps.Map(document.getElementById('map'), options);
+
+
+    var marker = new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: map,
+    });
 }
 
+window.initMap = initMap;
