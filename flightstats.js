@@ -2,6 +2,7 @@ let flightBtn = document.getElementById("flightbtn");
 let displayFlights = document.getElementById("flightsdisplay");
 let FlightSubmit = document.getElementById("flsubmit");
 let SelectedFC = document.getElementById("flightcode");
+let FlightsCard = document.getElementById("flights");
 
 function displayFlight() {
   displayEvent.style.display = "none";
@@ -27,12 +28,36 @@ function displayFlight() {
     };
 
     fetch(
-      "https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/city-directions?currency=USD&origin=LAX",
+      `https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/city-directions?currency=USD&origin=${selected}`,
       options
     )
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
+        let arrayData = response.data;
+        let sectionTitle = document.getElementById("flights-title");
+        sectionTitle.textContent = "Flights from " + SelectedFC.value;
+
+        for (const element in arrayData) {
+          let card = document.createElement("div");
+          card.setAttribute("class", "card small");
+          let column = document.createElement("div");
+          column.setAttribute("class", "col s12 m6 l3");
+
+          let title = document.createElement("h5");
+          title.setAttribute("class", "card-title");
+
+          let price = document.createElement("p");
+          let departat = document.createElement("p");
+
+          title.textContent = arrayData[element].destination;
+          price.textContent = arrayData[element].price;
+          departat.textContent = arrayData[element].departure_at;
+          column.appendChild(card);
+          card.appendChild(title);
+          card.appendChild(price);
+          card.appendChild(departat);
+          FlightsCard.appendChild(column);
+        }
       })
       .catch((err) => console.error(err));
   }
@@ -40,3 +65,14 @@ function displayFlight() {
 }
 
 flightBtn.addEventListener("click", displayFlight);
+
+// const sdsdsd = {
+//   myanme: {
+//     name: "chiemeka",
+//   },
+//   mdsd: 2,
+// };
+
+// for (const element in sdsdsd) {
+//   console.log(sdsdsd[element].name);
+// }
