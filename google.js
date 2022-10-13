@@ -1,5 +1,6 @@
 var searchBar = document.getElementById("city-input");
 var submitBtn = document.getElementById("fetch-button");
+
 var map;
 
 function geocode() {
@@ -27,3 +28,4 @@ function initMap() {
   };
   map = new google.maps.Map(document.getElementById("map"), options);
 }
+
