@@ -18,12 +18,13 @@ Create a function to compare locations and select the nearest city
 Refactor for cleaner/shorter code
 Add drop pin on maps to show the current location
 
-License
-Our license will be in a link that follows
-MIT License
-Links
-Deployed: Travel Hacker Live Site
-GitHub Repo: Travel Hacker Repository
+## Demo
+
+![Getting Started](assets/images//travelhackers.jpg)
+
+##Links
+Deployed: https://github.com/bekkanunez/Travel_Hacker
+GitHub Repo: https://bekkanunez.github.io/Travel_Hacker/
 
 ## Technologies
 
@@ -31,7 +32,7 @@ This section includes all the frameworks we built our project with:
 ![JavaScript Badge](https://img.shields.io/badge/Language-JavaScript-orange)
 ![HTML Badge](https://img.shields.io/badge/Language-HTML-green)
 ![CSS Badge](https://img.shields.io/badge/Language-CSS-blue)
-![Materialize] (https://img.shields.io/badge/Styling-Materialize-yellow)
+![Materialize](https://img.shields.io/badge/Styling-Materialize-yellow)
 
 ```
 APIs:
@@ -42,5 +43,6 @@ Exchange Rate
 Flights Statistics
 ```
 
-##License
+## License
+
 MIT License
